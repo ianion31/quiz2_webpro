@@ -1,0 +1,10 @@
+{
+  "name": "Java Tomcat JSP",
+  "image": "mcr.microsoft.com/devcontainers/java:17",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8080],
+  "postCreateCommand": "docker build -t web-jsp .",
+  "postStartCommand": "docker run -d -p 8080:8080 web-jsp"
+}
